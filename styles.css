@@ -143,7 +143,7 @@ ul > * {
 
 .cardsContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 
 }
@@ -198,5 +198,18 @@ ul > * {
 @media (max-width: 800px) {
     .body {
         grid-template-columns: 1fr;
+    }
+
+    .header {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .header > * {
+        justify-content: center;
+    }
+
+    .toprightheader {
+        display: none;
     }
 }
